@@ -49,8 +49,10 @@ export function EventsSlider({ events }: Props) {
                     <button className={styles.arrowBtn} onClick={() => scroll('left')}><MoveLeft strokeWidth={0.75} /></button>
                     <button className={`${styles.arrowBtn} ${styles.arrowBtnActive}`} onClick={() => scroll('right')}><MoveRight strokeWidth={0.75} /></button>
                 </div>
-                <Button ctaLabel='Explore Our All Events' ctaUrl='#' />
-                <a href="/events" className={styles.exploreBtn}>Explore Our All Events ↗</a>
+                <div style={{ width: "fit-content" }}>
+
+                    <Button ctaLabel='Explore Our All Events' ctaUrl='#' />
+                </div>
             </div>
         </div>
     )
