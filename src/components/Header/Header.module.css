@@ -205,7 +205,7 @@
   transform: translateX(-50%);
   width: 100%;
 
-  background-color: #fffffff2;
+  background-color: #ffffffcc;
   border-radius: 15px;
 
   box-shadow:
@@ -247,122 +247,7 @@
 
 }
 
-/* =======================
 
-
-.leftColumn {
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 14px;
-
-  padding-right: 28px;
-
-  border-right: 1px solid #ECECEC;
-
-}
-
-.universityCard {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  gap: 18px;
-
-  padding: 18px;
-
-  border-radius: 18px;
-
-  text-decoration: none;
-
-  transition: .25s;
-
-  color: #101828;
-
-}
-
-.universityCard:hover {
-
-  background: #F8F8F8;
-
-}
-
-.activeCard {
-
-  background: #e3e3e3;
-
-}
-
-.cardInfo {
-
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 16px;
-
-}
-
-.cardLogo {
-
-  width: 120px;
-
-  height: 56px;
-
-  object-fit: contain;
-
-  flex-shrink: 0;
-
-}
-
-.cardInfo h4 {
-
-  margin: 0;
-
-  font-size: 17px;
-
-  font-weight: 700;
-
-  color: #101828;
-
-}
-
-.cardInfo p {
-
-  margin-top: 6px;
-
-  font-size: 13px;
-
-  color: #667085;
-
-  line-height: 1.5;
-
-}
-
-.arrow {
-
-  font-size: 22px;
-
-  color: #B8BDC7;
-
-  transition: .25s;
-
-}
-
-.universityCard:hover .arrow {
-
-  transform: translateX(4px);
-
-  color: #101828;
-
-}
-
-/* = */
 
 .centerColumn {
 
