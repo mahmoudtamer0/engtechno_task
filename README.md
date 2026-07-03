@@ -2,91 +2,28 @@
 
 A pixel-perfect university landing page built with **Next.js**, **TypeScript**, and **Payload CMS**.
 
-The project focuses on creating a fully editable marketing website where all content is managed through the Payload CMS dashboard.
-
 ---
 
-## Tech Stack
+# Setup
 
-- Next.js 15
-- React
-- TypeScript
-- Payload CMS
-- MongoDB
-- CSS Modules
-
----
-
-## Features
-
-- Pixel-perfect responsive UI
-- Fully editable content using Payload CMS
-- Mega Menu Navigation
-- Hero Section
-- Campus / Experience Tabs
-- Partners Coverflow
-- Marquee Ribbons
-- Programs Slider
-- Events Slider
-- Testimonials Coverflow
-- Admission Steps
-- News Slider
-- Contact Form
-- Footer
-
----
-
-# Project Structure
-
-```
-├── src
-│   ├── app
-│   │
-│   ├── components
-│   │
-│   ├── payload
-│   │   ├── collections
-│   │   └── globals
-│   │
-│   └── lib
-│       └── cms
-│
-├── public
-│
-├── payload.config.ts
-│
-└── package.json
-```
-```
-
----
-
-# Getting Started
-
-## 1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone <repository-url>
+cd <project-name>
 ```
 
----
-
-## 2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
----
-
-## 3. Create an environment file
+### 3. Configure environment variables
 
 Create a `.env` file in the project root.
 
-Example:
-
 ```env
-
 DATABASE_URL=mongodb+srv://mamoidtamer300_db_user:mahmoudtamerdb@mahmoud.mljn6sw.mongodb.net/university_project?appName=Mahmoud
 PAYLOAD_SECRET=bc6a660930c4174cb7fc9274
 NEXT_PUBLIC_SERVER_URL=http://localhost:3000
@@ -95,17 +32,19 @@ leaved to run the application
 and also leaved the .env file to run the application
 ```
 
-Fill in the values according to your environment.
+### 4. Seed the database
 
----
+No manual seed is required.
 
-## 4. Run the development server
+All required content is already available through the provided database.
+
+### 5. Run the project
 
 ```bash
 npm run dev
 ```
 
-The application will start on:
+Application:
 
 ```
 http://localhost:3000
@@ -115,70 +54,42 @@ http://localhost:3000
 
 # Payload CMS
 
-Dashboard:
+Admin Dashboard
 
 ```
 http://localhost:3000/admin
 ```
 
-Demo credentials:
-
-**Email**
+Credentials
 
 ```
+Email:
 mahmoud.tamer.developer@gmail.com
-```
 
-**Password**
-
-```
+Password:
 Mahmoudtamer@1234
 ```
 
----
-
-# Available Scripts
-
-```bash
-npm run dev
-```
-
-Runs the development server.
-
-```bash
-npm run build
-```
-
-Creates a production build.
-
-```bash
-npm run start
-```
-
-Starts the production server.
+All website content (Header, Hero, Sections, Footer, etc.) can be edited directly from the Payload dashboard.
 
 ---
 
-# Notes
+# Architecture Decisions
 
-- All website content is managed through Payload CMS.
-- Images are uploaded through the CMS Media Collection.
-- Navigation, Hero, Sections, Footer, and other page content are editable from the dashboard.
+- Built using **Next.js App Router** with **Payload CMS** as a headless CMS.
+- Content is organized into **Globals** and **Collections** to keep the CMS maintainable and scalable.
+- Data fetching is abstracted inside `lib/cms` to keep components clean and reusable.
+- The UI is split into reusable React components, each responsible for a single section.
+- Styling is implemented using **CSS Modules** for component-level encapsulation.
+- Pages use **server-side data fetching** from Payload to ensure content is always up to date while keeping the frontend simple.
 
 ---
 
-# Contact
+# Trade-offs & Future Improvements
 
-**Mahmoud Tamer**
-
-Email:
-
-```
-mahmoud.tamer.developer@gmail.com
-```
-
-Phone:
-
-```
-01123511914
-```
+- Add image optimization with responsive image sizes.
+- Improve accessibility (ARIA attributes and keyboard navigation).
+- Add loading skeletons and better error handling.
+- Add unit and integration tests.
+- Optimize caching strategy for production using Next.js revalidation.
+- Enhance mobile navigation with nested accordions and animations.
