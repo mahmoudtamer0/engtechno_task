@@ -32,7 +32,6 @@ export function Coverflow({ items }: Props) {
                     const distance = i - activeIndex
                     const absDistance = Math.abs(distance)
 
-                    // مفيش حاجة تتعرض لو بعيدة جداً
                     if (absDistance > 3) return null
 
                     const translateX = distance * 160

@@ -105,7 +105,6 @@
   color: #e84925;
 }
 
-/* ===== Legacy mega menu classes (kept in case still referenced) ===== */
 .megaMenu {
   position: fixed;
   top: 100%;
@@ -193,7 +192,6 @@
   color: #e84925;
 }
 
-/* ===== RESPONSIVE ===== */
 /* @media (max-width: 1024px) {
   .header {
     padding: 0 20px;
@@ -262,9 +260,7 @@
   }
 } */
 
-/* ===========================
-        MEGA MENU
-=========================== */
+
 
 .navItemWrapper {
   position: relative;
@@ -320,8 +316,7 @@
 }
 
 /* =======================
-        LEFT
-======================= */
+
 
 .leftColumn {
 
@@ -435,9 +430,7 @@
 
 }
 
-/* =======================
-        CENTER
-======================= */
+/* = */
 
 .centerColumn {
 
@@ -475,9 +468,7 @@
 
 }
 
-/* =======================
-        RIGHT
-======================= */
+
 
 .rightColumn {
 
@@ -495,9 +486,6 @@
   max-height: 265px;
 }
 
-/* =======================
-        Responsive
-======================= */
 
 @media(max-width:1250px) {
 

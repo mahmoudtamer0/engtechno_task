@@ -100,7 +100,6 @@ export function DropdownMenu({ link }: Props) {
             {open && (
                 <div className={styles.megaMenu}>
                     <div className={styles.megaWrapper}>
-                        {/* LEFT */}
 
                         <div className={styles.leftColumn}>
                             {link.megaMenu?.cards?.map((card, index) => (
@@ -137,7 +136,6 @@ export function DropdownMenu({ link }: Props) {
                             ))}
                         </div>
 
-                        {/* CENTER */}
 
                         <div className={styles.centerColumn}>
                             {link.megaMenu?.links?.map((item) => (
@@ -151,7 +149,6 @@ export function DropdownMenu({ link }: Props) {
                             ))}
                         </div>
 
-                        {/* RIGHT */}
 
                         <div className={styles.rightColumn}>
                             {link.megaMenu?.heroImage?.url && (
