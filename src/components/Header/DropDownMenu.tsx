@@ -40,7 +40,6 @@ export function DropdownMenu({ link }: Props) {
     const [open, setOpen] = useState(false)
     const [activeCard, setActiveCard] = useState(0)
 
-    console.log(link)
 
     const hasMega =
         link.megaMenu &&

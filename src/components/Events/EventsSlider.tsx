@@ -24,7 +24,6 @@ export function EventsSlider({ events }: Props) {
 
     const scroll = (direction: 'left' | 'right') => {
         const cardWidth = 540;
-        console.log(scrollDevRef.current)
         scrollDevRef.current?.scrollBy({
             left: direction === 'left' ? -cardWidth : cardWidth,
             behavior: 'smooth',

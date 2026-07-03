@@ -111,7 +111,7 @@
   left: 0;
   right: 0;
   width: 100vw;
-  background: #ffffffcc;
+  background-color: #ffffffcc;
   border-radius: 0;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
   padding: 40px 80px;
@@ -191,74 +191,6 @@
 .menuCardContent li a:hover {
   color: #e84925;
 }
-
-/* @media (max-width: 1024px) {
-  .header {
-    padding: 0 20px;
-    max-width: calc(100% - 40px);
-  }
-
-  .megaMenu {
-    min-width: 420px;
-    left: -30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    position: static;
-    padding: 0 16px;
-    margin-top: 0;
-    border-radius: 0;
-    max-width: 100%;
-  }
-
-  .topBar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 8px 16px;
-  }
-
-  .topBarLeft,
-  .topBarRight {
-    width: 100%;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .mainNav {
-    flex-direction: column;
-    gap: 12px;
-    padding: 8px 0;
-  }
-
-  .dropdown {
-    position: static;
-    box-shadow: none;
-    margin-top: 8px;
-    padding: 0;
-    min-width: 0;
-  }
-
-  .megaMenu {
-    padding: 24px 16px;
-    width: 100vw;
-    left: -50vw;
-  }
-
-  .menuGrid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .menuCardImage {
-    height: 120px;
-  }
-
-  .menuCardContent {
-    padding: 12px;
-  }
-} */
 
 
 
