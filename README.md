@@ -93,3 +93,27 @@ All website content (Header, Hero, Sections, Footer, etc.) can be edited directl
 - Add unit and integration tests.
 - Optimize caching strategy for production using Next.js revalidation.
 - Enhance mobile navigation with nested accordions and animations.
+
+
+
+## Notes
+
+- This project uses Payload CMS with the local upload adapter by default.
+- When deploying to Vercel, locally uploaded media files are not persistent because Vercel's filesystem is ephemeral.
+- For production deployments, it is recommended to use an external storage provider such as Cloudinary, AWS S3, or Vercel Blob Storage for media uploads.
+
+# Contact
+
+**Mahmoud Tamer**
+
+Email:
+
+```
+mahmoud.tamer.developer@gmail.com
+```
+
+Phone:
+
+```
+01123511914
+```
