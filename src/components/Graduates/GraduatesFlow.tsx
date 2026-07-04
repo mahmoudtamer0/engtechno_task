@@ -17,6 +17,7 @@ type Props = {
     items: Testimonial[]
 }
 
+
 export function Coverflow({ items }: Props) {
     const [activeIndex, setActiveIndex] = useState(Math.floor(items.length / 2))
 

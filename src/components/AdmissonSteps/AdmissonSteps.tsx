@@ -30,6 +30,7 @@ export async function AdmissionSteps() {
                 </div>
                 <div style={{ marginBottom: '20px' }}>
 
+
                     <Headline headline={title} />
                 </div>
                 <div style={{ marginBottom: '20px' }}>

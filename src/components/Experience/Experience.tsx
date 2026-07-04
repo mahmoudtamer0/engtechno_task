@@ -1,7 +1,6 @@
 import { getExperience } from '@/lib/cms/getExperience'
 import styles from './Experience.module.css'
 import { Tabs } from './Tabs'
-import Button from '../MainBtn/Button'
 
 export async function Experience() {
     const data = await getExperience()

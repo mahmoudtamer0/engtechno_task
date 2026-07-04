@@ -14,7 +14,6 @@ type Props = {
 }
 
 export const EventsCard = memo(({ event, imageUrl }: Props) => {
-
     return (
         <a href={event.url ?? '#'} className={styles.card}>
             <img src={imageUrl} alt={event.title} className={styles.cardImage} />
