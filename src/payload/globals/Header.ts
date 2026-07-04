@@ -10,7 +10,7 @@ export const Header: GlobalConfig = {
   hooks: {
     afterChange: [
       () => {
-        revalidateTag('events', { expire: 0 })
+        revalidateTag('header', { expire: 0 })
       },
     ],
   },
