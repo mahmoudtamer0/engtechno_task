@@ -1,3 +1,4 @@
+import { revalidateTag } from 'next/cache'
 import type { GlobalConfig } from 'payload'
 
 
@@ -5,6 +6,13 @@ const Experience: GlobalConfig = {
   slug: 'experience',
   label: 'Experience Section',
   access: { read: () => true },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('experience', { expire: 0 })
+      },
+    ],
+  },
   fields: [
     {
       name: 'headline',

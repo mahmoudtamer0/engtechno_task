@@ -1,8 +1,16 @@
+import { revalidateTag } from 'next/cache'
 import type { GlobalConfig } from 'payload'
 
 export const AdmissionSteps: GlobalConfig = {
     slug: 'admission-steps',
     access: { read: () => true },
+    hooks: {
+        afterChange: [
+            () => {
+                revalidateTag('addmission-steps', { expire: 0 })
+            },
+        ],
+    },
     fields: [
         { name: 'subheadline', type: 'text' },
         { name: 'headline', type: 'text', required: true },

@@ -9,6 +9,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { anyone } from '@/access/anyone'
 import { authenticated } from '@/access/authenticated'
+import { revalidateTag } from 'next/cache'
 
 // import { anyone } from '../access/anyone'
 // import { authenticated } from '../access/authenticated'
@@ -28,6 +29,18 @@ export const Media: CollectionConfig = {
 
   admin: {
     useAsTitle: 'url',
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('media', { expire: 0 })
+      },
+    ],
+    afterDelete: [
+      () => {
+        revalidateTag('media', { expire: 0 })
+      },
+    ],
   },
 
   fields: [

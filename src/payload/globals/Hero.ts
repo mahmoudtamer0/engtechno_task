@@ -1,9 +1,17 @@
+import { revalidateTag } from 'next/cache'
 import type { GlobalConfig } from 'payload'
 
 export const Hero: GlobalConfig = {
   slug: 'hero',
   label: 'Hero Section',
   access: { read: () => true },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('hero', { expire: 0 })
+      },
+    ],
+  },
   fields: [
     {
       name: 'headline',

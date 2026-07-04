@@ -1,8 +1,16 @@
+import { revalidateTag } from 'next/cache'
 import type { GlobalConfig } from 'payload'
 
 export const Partners: GlobalConfig = {
     slug: 'partners',
     access: { read: () => true },
+    hooks: {
+        afterChange: [
+            () => {
+                revalidateTag('partners', { expire: 0 })
+            },
+        ],
+    },
     fields: [
         {
             name: 'partners',

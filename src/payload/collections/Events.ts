@@ -1,3 +1,4 @@
+import { revalidateTag } from 'next/cache'
 import type { CollectionConfig } from 'payload'
 
 export const Events: CollectionConfig = {
@@ -6,6 +7,18 @@ export const Events: CollectionConfig = {
         useAsTitle: 'title',
     },
     access: { read: () => true },
+    hooks: {
+        afterChange: [
+            () => {
+                revalidateTag('events', { expire: 0 })
+            },
+        ],
+        afterDelete: [
+            () => {
+                revalidateTag('events', { expire: 0 })
+            },
+        ],
+    },
     fields: [
         { name: 'title', type: 'text', required: true },
         { name: 'description', type: 'textarea' },

@@ -1,9 +1,17 @@
+import { revalidateTag } from 'next/cache'
 import type { GlobalConfig } from 'payload'
 
 export const newsGlobal: GlobalConfig = {
     slug: 'newsGlobal',
     label: 'News Section',
     access: { read: () => true },
+    hooks: {
+        afterChange: [
+            () => {
+                revalidateTag('newsGlobal', { expire: 0 })
+            },
+        ],
+    },
     fields: [
         {
             name: 'headline',

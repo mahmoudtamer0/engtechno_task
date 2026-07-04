@@ -1,3 +1,4 @@
+import { revalidateTag } from 'next/cache'
 import type { GlobalConfig } from 'payload'
 
 export const Footer: GlobalConfig = {
@@ -5,6 +6,13 @@ export const Footer: GlobalConfig = {
 
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('footer', { expire: 0 })
+      },
+    ],
   },
 
   fields: [
