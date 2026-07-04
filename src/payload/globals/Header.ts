@@ -1,10 +1,18 @@
 import type { GlobalConfig } from 'payload'
+import { revalidateTag } from 'next/cache'
 
 export const Header: GlobalConfig = {
   slug: 'header',
 
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('events', { expire: 0 })
+      },
+    ],
   },
 
   fields: [
