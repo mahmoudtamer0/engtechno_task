@@ -8,6 +8,7 @@
     flex-wrap: wrap;
 }
 
+
 .left {
     flex: 0 0 320px;
     display: flex;

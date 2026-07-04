@@ -13,6 +13,7 @@ type Props = {
     isFirst?: boolean
 }
 
+
 export function PartnerCard({ name, logoUrl, backgroundUrl, ctaLabel, ctaUrl, stats, index, isFirst }: Props) {
 
     return (

@@ -1,19 +1,21 @@
-build
-dist
-node_modules
-.DS_Store
-.next
-next-env.d.ts
-.vercel
-
-
-public/robots.txt
-public/sitemap*.xml
-
-
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+build
+dist
+node_modules
+.DS_Store
+.next
+next-env.d.ts
+.vercel
+
+
+public/robots.txt
+public/sitemap*.xml
+
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+config.bat
+.env

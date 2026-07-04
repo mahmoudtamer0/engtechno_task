@@ -7,6 +7,7 @@ import Button from '../MainBtn/Button'
 export function Footer({ data }: any) {
     const logoUrl = typeof data.logo === 'object' ? data.logo?.url ?? '' : ''
 
+
     return (
         <footer className={styles.footer}>
             <div className={styles.top}>
