@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from './Experience.module.css'
 import Button from '../MainBtn/Button'
+import { Badge } from '../MainHeadings/Badge'
+import Headline from '../MainHeadings/Headline'
 
 type Tab = {
     title: string
@@ -41,8 +43,13 @@ export function Tabs({ tabs, headline, subheadline, ctaLabel, ctaUrl }: Props) {
             <div className={styles.wrapper}>
 
                 <div className={styles.left}>
-                    <span className={styles.badge}>{subheadline}</span>
-                    <h2 className={styles.title}>{headline}</h2>
+                    <div style={{ marginBottom: "20px" }}>
+                        <Badge badge={subheadline} />
+                    </div>
+
+                    <div style={{ marginBottom: "30px" }}>
+                        <Headline headline={headline} />
+                    </div>
 
                     <div className={styles.tabsWrapper}>
                         <div className={styles.progressBar}>

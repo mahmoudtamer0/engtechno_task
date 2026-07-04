@@ -95,7 +95,6 @@ All website content (Header, Hero, Sections, Footer, etc.) can be edited directl
 - Enhance mobile navigation with nested accordions and animations.
 
 
-
 ## Notes
 
 - This project uses Payload CMS with the local upload adapter by default.

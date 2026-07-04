@@ -2,6 +2,10 @@ import { getNewsGlobal } from '@/lib/cms/getNewGlobal'
 import { getNews } from '@/lib/cms/getNews'
 import styles from './News.module.css'
 import { NewsSlider } from './NewsSlider'
+import { Badge } from '../MainHeadings/Badge'
+import { title } from 'process'
+import Headline from '../MainHeadings/Headline'
+import { SecondeSubHeading } from '../MainHeadings/SecondeSubHeading'
 
 
 export async function News() {
@@ -19,9 +23,9 @@ export async function News() {
     return (
         <section className={styles.section}>
             <div className={styles.header}>
-                <span className={styles.badge}>{subheadline}</span>
-                <h2 className={styles.title}>{headline}</h2>
-                <p className={styles.subtitle}>{secondSubheadline}</p>
+                <Badge badge={subheadline} />
+                <Headline headline={headline} />
+                <SecondeSubHeading subheadline={secondSubheadline} />
             </div>
             <NewsSlider items={items} ctaLabel={ctaLabel} ctaUrl={ctaUrl} />
         </section>

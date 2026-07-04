@@ -2,6 +2,9 @@ import { getAdmissionSteps } from '@/lib/cms/getAdmissionSteps'
 import styles from './AdmissionSteps.module.css'
 import Button from '../MainBtn/Button'
 import Step from './step'
+import { Badge } from '../MainHeadings/Badge'
+import Headline from '../MainHeadings/Headline'
+import { SecondeSubHeading } from '../MainHeadings/SecondeSubHeading'
 
 
 export async function AdmissionSteps() {
@@ -21,9 +24,17 @@ export async function AdmissionSteps() {
     return (
         <section className={styles.section}>
             <div className={styles.left}>
-                <span className={styles.badge}>{badge}</span>
-                <h2 className={styles.title}>{title}</h2>
-                <p className={styles.subtitle}>{subtitle}</p>
+                <div style={{ marginBottom: '20px' }}>
+
+                    <Badge badge={badge} />
+                </div>
+                <div style={{ marginBottom: '20px' }}>
+
+                    <Headline headline={title} />
+                </div>
+                <div style={{ marginBottom: '20px' }}>
+                    <SecondeSubHeading subheadline={subtitle} />
+                </div>
                 <div style={{ width: 'fit-content' }}>
                     <Button ctaLabel={ctaLabel} ctaUrl={ctaUrl} />
                 </div>

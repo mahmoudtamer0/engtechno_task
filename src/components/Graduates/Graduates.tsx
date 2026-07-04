@@ -3,6 +3,9 @@ import { Coverflow } from './GraduatesFlow'
 import { getGraduatesGlobal } from '@/lib/cms/getGraduatesGlobal'
 import { getGraduates } from '@/lib/cms/getGraduates'
 import Button from '../MainBtn/Button'
+import Headline from '../MainHeadings/Headline'
+import { Badge } from '../MainHeadings/Badge'
+import { SecondeSubHeading } from '../MainHeadings/SecondeSubHeading'
 
 export async function Graduates() {
     const graduatesSection = await getGraduatesGlobal()
@@ -21,9 +24,9 @@ export async function Graduates() {
     return (
         <section className={styles.section}>
             <div className={styles.header}>
-                <span className={styles.badge}>{badge}</span>
-                <h2 className={styles.title}>{title}</h2>
-                <p className={styles.subtitle}>{subtitle}</p>
+                <Badge badge={badge} />
+                <Headline headline={title} />
+                <SecondeSubHeading subheadline={subtitle} />
             </div>
 
             <Coverflow items={items} />

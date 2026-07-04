@@ -2,6 +2,9 @@
 
 import { useState } from 'react'
 import styles from './Contact.module.css'
+import { ArrowUpRight } from 'lucide-react'
+import Headline from '../MainHeadings/Headline'
+import { SecondeSubHeading } from '../MainHeadings/SecondeSubHeading'
 
 type Props = {
     badge?: string | null
@@ -59,8 +62,8 @@ export function ContactForm({
         <section className={styles.section} >
             <div className={styles.left}>
                 <span className={styles.badge}> {badge} </span>
-                < h2 className={styles.title} > {title} </h2>
-                < p className={styles.subtitle} > {subtitle} </p>
+                <Headline headline={title} />
+                <SecondeSubHeading subheadline={subtitle} />
                 < div className={styles.contactInfo} >
                     <div className={styles.infoRow}>
                         <span>{phoneLabel} </span>
@@ -69,7 +72,7 @@ export function ContactForm({
                     </div>
                     < div className={styles.infoRow} >
                         <span>{emailLabel} </span>
-                        < a href={`mailto:${emailValue}`}> {emailValue} </a>
+                        <a href={`mailto:${emailValue}`}> {emailValue} </a>
                     </div>
                 </div>
             </div>
@@ -111,8 +114,9 @@ export function ContactForm({
                     {errors.message && <span className={styles.error}> {errors.message} </span>}
                 </div>
 
-                < button type="submit" className={styles.submitBtn} >
-                    {buttonLabel} ↗
+                <button className={styles.ctaBtn} type="submit">
+                    {buttonLabel}
+                    <span><ArrowUpRight /></span>
                 </button>
 
                 {submitted && <p className={styles.success}> Message sent successfully! </p>}

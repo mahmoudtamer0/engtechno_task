@@ -2,6 +2,8 @@ import { getMajorsGlobal } from '@/lib/cms/getMajorsGlobal'
 import styles from './Majors.module.css'
 import { ProgramsSlider } from './MajorsSlider'
 import { getMajors } from '@/lib/cms/getMajors'
+import Headline from '../MainHeadings/Headline'
+import { Badge } from '../MainHeadings/Badge'
 
 
 export async function Majors() {
@@ -13,8 +15,8 @@ export async function Majors() {
     return (
         <section className={styles.section}>
             <div className={styles.header}>
-                <span className={styles.badge}>{data.subheadline}</span>
-                <h2 className={styles.title}>{data.headline}</h2>
+                <Badge badge={data.subheadline} />
+                <Headline headline={data.headline} />
             </div>
             <ProgramsSlider programs={majors} />
         </section>
